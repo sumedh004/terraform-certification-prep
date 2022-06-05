@@ -6,7 +6,7 @@ region = var.region
 resource "aws_vpc" "primary" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
-enable_dns_support   = true
+  enable_dns_support   = true
   tags = {
     Name = "VPC1"
   }
@@ -15,7 +15,7 @@ enable_dns_support   = true
 resource "aws_vpc" "secondary" {
   cidr_block           = "20.0.0.0/16"
   enable_dns_hostnames = true
-enable_dns_support   = true
+  enable_dns_support   = true
   tags = {
     Name = "VPC2"
   }
@@ -44,7 +44,7 @@ resource "null_resource" "delete" {
     EOT  
 
 }
-depends_on = [aws_route53_zone.private]
+   depends_on = [aws_route53_zone.private]
 }
 
 
