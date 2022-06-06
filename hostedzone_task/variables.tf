@@ -8,4 +8,5 @@ variable "main_region" {
 variable "name" {
   type        = string
   description = "Enter name for hosted zone"
+  default     = "sumedh.com"
 }
